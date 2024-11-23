@@ -1,0 +1,16 @@
+name: Assign Issue to Team Member
+
+on:
+  issues:
+    types: [opened]  # Trigger this action when an issue is opened
+
+jobs:
+  assign_issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Assign issue to a specific user
+        uses: peter-evans/assign-issue@v2
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          assignees: 'username'  # Replace 'username' with the GitHub username of the person you want to assign
