@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Assign issue to a specific team member
+      - name: 'am2024024'
         uses: peter-evans/assign-issue@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
-          assignees: 'X'  # Replace 'X' with the GitHub username of the team member
+          assignees: 'am20242024'  # Replace 'X' with the GitHub username of the team member
